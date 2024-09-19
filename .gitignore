@@ -1,0 +1,8 @@
+build
+.cache
+.west
+zephyr
+modules
+tools
+bootloader
+*.cmake
