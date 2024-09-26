@@ -1,6 +1,6 @@
 #ifndef DISPLAY_H
 #define DISPLAY_H
 
-#define TOLVA_DISPLAY DT_CHOSEN(zephyr_display)
+int init_display(void);
 
 #endif
