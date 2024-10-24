@@ -3,7 +3,6 @@
 
 #include "ble.h"
 #include "display.h"
-#include "log.h"
 
 struct wifi_info {
   char ssid[32];

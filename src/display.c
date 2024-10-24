@@ -3,10 +3,13 @@
 #include <zephyr/device.h>
 #include <zephyr/devicetree.h>
 #include <zephyr/drivers/display.h>
+#include <zephyr/drivers/gpio.h>
+#include <zephyr/drivers/spi.h>
+#include <zephyr/logging/log.h>
 
 #define TOLVA_DISPLAY DT_CHOSEN(zephyr_display)
 
-#include "log.h"
+LOG_MODULE_REGISTER(tolva_display);
 
 int init_display(void) {
 #if DT_NODE_HAS_STATUS(TOLVA_DISPLAY, okay)
@@ -19,5 +22,6 @@ int init_display(void) {
     LOG_ERR("display not ready");
     return 1;
   }
+  LOG_INF("display is ready");
   return 0;
 }

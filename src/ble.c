@@ -7,6 +7,7 @@
 #include <zephyr/bluetooth/gatt.h>
 #include <zephyr/bluetooth/hci.h>
 #include <zephyr/bluetooth/uuid.h>
+#include <zephyr/logging/log.h>
 #include <zephyr/settings/settings.h>
 #include <zephyr/types.h>
 
@@ -14,8 +15,10 @@
 #include <mgmt/smp_bt.h>
 #endif
 
-#include "log.h"
+// #include "log.h"
 #include "version.h"
+
+LOG_MODULE_REGISTER(tolva_ble);
 
 static void connected(struct bt_conn *conn, uint8_t err);
 static void disconnected(struct bt_conn *conn, uint8_t reason);
