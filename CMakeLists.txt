@@ -8,12 +8,6 @@ project(tolva)
 
 FILE(GLOB app_sources src/*.c)
 
-
 target_sources(app PRIVATE
   ${app_sources}
   )
-
-# Optionally, include the tests directory if testing
-if(CONFIG_TESTING)
-    add_subdirectory(tests)
-endif()

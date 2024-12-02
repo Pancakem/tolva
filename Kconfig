@@ -1,0 +1,24 @@
+mainmenu "tolva"
+
+menu "tolva config"
+
+config VIDEO_FRAME_HEIGHT
+       int "Height of the video frame"
+       default 0
+       help
+        Height of the video frame. If set to 0, the default height is used.
+
+config VIDEO_FRAME_WIDTH
+       int "Width of the video frame"
+       default 0
+       help
+        Width of the video frame. If set to 0, the default width is used.
+
+config VIDEO_PIXEL_FORMAT
+       string "Pixel format of the video frame"
+       help
+        Pixel format of the video frame. If not set to 0, the default pixel format is used.
+
+endmenu
+
+source "Kconfig.zephyr"
